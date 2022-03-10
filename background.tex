@@ -1,11 +1,55 @@
 \section{BACKGROUND AND LITERATURE REVIEW}\label{Sec:intro}
-This is an introduction to $\LaTeX$ for the COMP0219 course.  The basic $\LaTeX$ tricks you may want are the following.  First, make sure that you write all your text in the main.tex.  Whenever you want to check the .pdf file, press the PDF button on the left sidebar and click: Recompile.  Secondly, you should be able to include figures and images in your document, which is done as follows (give always a label):
+A lot of work has been done on the design of a fire fighting robot. Studies on the use of robots are actively carried out to minimize firefighters’ injuries and deaths as well as increasing productivity, safety, efficiency and quality of the task given [1]. Some firefighting robots designed are especially suited to indoor fire rescue task. For example, Fire Searcher [2], is a a scout robot deployed to hazardous environment with fire and poisonous gas. The robot supplies update about the fire and the victims of the building it is in. The portable fire evacuation guide robot [5] much like the fire searcher can be remotely controlled and was built to be thrown into high risk areas and transfer environmental information back to the operators. The disadvantage of these robots is that they are non autonomous and relies heavily on a remote operator to decide where to move and search.\\
 
-In Fig.~\ref{Fig:universe} we show a picture of the universe!
+Another work done in this area is the design of a rough terrain robot for rescue mission called Tehzeeb [3] which is a semi-autonomous robot designed to rescue victims. This robot can localize itself and build a map of its surrounding as it searches. While this is another fantastic approach to rescue victims, the challenge with this approach is the time it takes to build a map of the environment. The robot spends an enormous amount of time moving in areas where there is no fire before finding fire. As fire fighting is a time dependent operation, it may not be possible to deploy this type of robot except in test-case scenarios.\\
 
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[scale=1.7]{figures/universe.jpg}
-  \caption{The Universe}
-  \label{Fig:universe}
-\end{figure}
+
+[8] suggested a way of including life detector radar into search robot. The life detection radar emits continuous sinusoidal waves and ultra wide band radar within a certain frequency range  (0-3Hz) which is the frequency range produced by the motion of the thorax caused by respiration and heartbeat. the radar electromagnetic wave penetrates the human body and if there is sign of breathing. this is picked up by the receiver which is able to tell that the person is alive. This radar, however, is only created and tested in simulation, and a commercial alternative must be found, that replicates its functionality.\\
+%Although they simulated this detector radar in their work. we incorporated a commercially available alternative(lifelocator IV)that works based on the same principle and performs the same functionality.\\
+
+[10] worked on scenarios where robots can be used in fire-fighting and rescue operations. The robot used in this test application had $\mathrm{CO_2}$ sensors to detect the level of $\mathrm{CO_2}$ in the environment and gas concentration measuring instrument. However their work did not proffer a way to remove the $\mathrm{CO_2}$ or toxic gas which could be fatal to survivors. In the work done by [11], they proffer a way of removing to smoke from fire location by using a suction vacuum fan. However, they had no on-board sensors to determine the level of toxicity in the atmosphere. A combination of the two systems may provide better functionality to save a human in a disastrous scenario.\\
+
+In the work done by [12], they included a way to ensure that the robot can withstand high temperature as in a real fire scenario. This was done by using aluminium compound metal with Teflon wiring for the external body and internal circuit which enables the robot to be able to survive up to approximately 250\degree C.\\
+
+In this study, we noted the advantages and  limitations of existing work and have designed our robot such that it is able to surmount this limitation. We have also taken advantage of the work done by utilizing some solutions provided in previous study.\\
+
+
+% Many current commercially available firefighting robots such as Thermite and FireRob are designed to be able to withstand high temperature of more than 800\degree C as in a fire incident. They are able ot do Although these robots are efficient in aiding fire suppression. they are non autonomous so they have to be controlled remotely and are quite big for the desired application. 
+
+
+
+
+
+% Since they are suited to withstand high temperature due to their coating. SPOT will be coated same material that can withstand such heat. 
+
+
+
+% building a map of the most engulfed parts of the building using a LIDAR sensor to build a 3D map of the current environment and 
+
+%  The operator can also directly communicate with the trapped victims via wireless communication, allowing for an efficient rescue plan.
+
+% Just like the fire searcher, it is capable of searching for victims and helping them evacuate by voice communication between firefighters and the victims themselves
+
+% Also there might be a failure in communication via wireless technology hence, making it sometime unreliable to follow. 
+
+% This is an introduction to $\LaTeX$ for the COMP0219 course.  The basic $\LaTeX$ tricks you may want are the following.  First, make sure that you write all your text in the main.tex.  Whenever you want to check the .pdf file, press the PDF button on the left sidebar and click: Recompile.  Secondly, you should be able to include figures and images in your document, which is done as follows (give always a label):
+
+% In Fig.~\ref{Fig:universe} we show a picture of the universe!
+
+% \begin{figure}[ht!]
+%   \centering
+%   \includegraphics[scale=1.7]{figures/universe.jpg}
+%   \caption{The Universe}
+%   \label{Fig:universe}
+% \end{figure}
+
+
+
+% Another relevant work was done by Altaf et al. [6]. They made a fully automated a fire-fighting robot directed by a maze of white fluorescent line on a blue arena. The shortfall of this robot is that it can work only some specific places which are designed in this way. If fire accidents occur in huge arenas which most likely would not have this design,  the robot will be rendered unusable in this situation.
+
+% REMOVE
+
+% All the above mentioned indoor robots have the capability of performing firefighting tasks indoors and some even in tight spaces due to their smaller sizing. However, some are non-autonomous which makes them mainly dependent on a remote operator to decide where to move and search. In addition, limitations of the current wireless communication technology can create unstable connections that make data collection and communication challenging. These robots also only allow a small and narrow view for the operator which may make it difficult for the operator to find fire and make quick decisions. Although some of the robots do have autonomous systems to do their own tasks, they might spend much time moving restlessly in areas where there is no fire before finding fire. All in all, these robots' functions may waste crucial time during urgent situations.[7]
+
+
+% REMOVE 

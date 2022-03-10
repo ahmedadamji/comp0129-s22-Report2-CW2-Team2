@@ -1,18 +1,40 @@
 \section{PROPOSAL}\label{Sec:method}
-This section introduces the methodology.
+In proposed solution, the Spot robot [289] is equipped with additional sensors and the appropriate modules, with respect to the firefighting scenario. A FARO Focus Laser Scanner [https://www.faro.com/en/Products/Hardware/Trek-3D-Laser-Scanning-Integration] is integrated to enable autonomous live scanning of the environment, which can be extremely useful to enable firefighters look at the scene and determine how to enter the scene if a human needs to be rescued once detected. A Probe Microphone ICP [https://www.pcb.com/products?m=377b26] is attached, which can enable us to detect noises from humans calling for help to aid in the detection of life, suitable to operate in the required temperature range. Additionally, a radiometric, FLIRⓇ, thermal camera [https://www.flir.co.uk/products/e6-xt/] is also attached, which detects up to a maximum of 550\degree C., which can be used to infer what are the most impacted regions in the environment, and if a human detected is caught in a fire which can be an immediate concern for firefighters. \\
 
-\subsection{Sections and subsections}\label{Sec:general}
-You can split a section to subsections, and even reference them.  For instance Section~\ref{Sec:intro} is the introduction.  You can also reference the figures.  For instance Fig.~\ref{Fig:universe} is a picture of the universe.  Note that you should upload a figure/picture in the same folder and the main.tex file (using the upload button in the left sidebar).  Also you can add references, which have a special format stored in references.bib file.  To reference a paper you can do in the following way: paper~\cite{Adams1995, Kanoulas2019} talks about the universe.
+As described by [8], we add a life detection radar that can sense low frequency pulse of the heart and determine the location of fire victims and survivors. Although they simulated this detector radar in their work, we incorporated a commercially available alternative (lifelocator IV[290]) that works based on the same principle and performs the same functionality. This is then shared along with the live map of the environment to fire fighters and be used by the fire fighter to rescue trapped victims.\\
 
-\subsection{Math}
-Math text in $\LaTeX$ are going between dollar signs: $^{0}T_{1}$ is a transformation from frame ${1}$ to frame ${2}$.  The underscore is for subscripts and the hat for superscripts, i.e. $a^2$ and $b_2$.  Also we can include a bit more complex equations in the following way:
+We have included a suction vacuum fan on the back of the robot, along with a commercially available $\mathrm{CO_2}$ sensor[10][11]. This is such that the robot can use it to suck out dangerous vapour that could be imminently fatal to people trapped in the environment, based on the gas concentration detected. The robots will need to return outside the building if it is low on battery or needs to empty its fume tank. It can use the map of the environment built to navigate back outside. These modules will need to be designed in such a way that they can be simply swapped without wasting time, especially due to this being an emergency scenario and wasting time charging the robot may not be feasible. The spot robot will be fitted with slide-able slots for the extinguisher which connects it to the actuation mechanism. Fortunately, the Spot robot secures the battery through a simple latch, and a spare battery can be swapped through a sliding mechanism to fulfil our requirements [Reference]. \\
 
-\begin{equation}
-    ^{0}T_{1} =
-    \begin{bmatrix}
-    &           & &           \\
-    & ^{0}R_{1} & & ^{0}t_{1} \\
-    &           & &           \\
-    0 & 0 & 0 & 1
-    \end{bmatrix}
-\end{equation}
+To counteract issues relating to the robot’s operating temperature, it will need to be custom built with thermally resistant materials,aluminium compound metal with Teflon wiring, described in [12], so that it can withstand the heat and function optimally.\\
+
+We propose the robot operates in the stages as follows:
+\begin{enumerate}
+    \item Evaluate the scenario and send robot to the most affected region.
+    \item Use thermal sensor to determine the hottest regions
+    \item Advance towards hottest region; If path blocked, use arm to remove obstacles in the way to allow for a clear rescue path, by utilising Exteroceptive sensors (RGB camera) and Proprioceptive sensors (IMU), on the manipulator.
+    \item Detect life using noise detection and life detection sensors
+    \item Measure the toxicity of fatal fumes around the trapped person, and suction the fumes according to set threshold
+    \item Send the location of detected person along with the generated scan of the environment to the rescue team.
+\end{enumerate}
+
+We monitor the level of the fume tank using a pressure sensor and the robot’s battery voltage to determine if the robot needs to return to swap these parts, in which case the robot uses the map it generated of its environment to return outside the building, and later returns to the same location in the building to resume its search and aid operation. 
+A diagram of the modified robot is shown in figure X.
+
+
+
+
+% \subsection{Sections and subsections}\label{Sec:general}
+% You can split a section to subsections, and even reference them.  For instance Section~\ref{Sec:intro} is the introduction.  You can also reference the figures.  For instance Fig.~\ref{Fig:universe} is a picture of the universe.  Note that you should upload a figure/picture in the same folder and the main.tex file (using the upload button in the left sidebar).  Also you can add references, which have a special format stored in references.bib file.  To reference a paper you can do in the following way: paper~\cite{Adams1995, Kanoulas2019} talks about the universe.
+
+% \subsection{Math}
+% Math text in $\LaTeX$ are going between dollar signs: $^{0}T_{1}$ is a transformation from frame ${1}$ to frame ${2}$.  The underscore is for subscripts and the hat for superscripts, i.e. $a^2$ and $b_2$.  Also we can include a bit more complex equations in the following way:
+
+% \begin{equation}
+%     ^{0}T_{1} =
+%     \begin{bmatrix}
+%     &           & &           \\
+%     & ^{0}R_{1} & & ^{0}t_{1} \\
+%     &           & &           \\
+%     0 & 0 & 0 & 1
+%     \end{bmatrix}
+% \end{equation}

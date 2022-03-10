@@ -1,11 +1,39 @@
 \section{INTRODUCTION}\label{Sec:intro}
-This is an introduction to $\LaTeX$ for the COMP0219 course.  The basic $\LaTeX$ tricks you may want are the following.  First, make sure that you write all your text in the main.tex.  Whenever you want to check the .pdf file, press the PDF button on the left sidebar and click: Recompile.  Secondly, you should be able to include figures and images in your document, which is done as follows (give always a label):
+% The rise of industrialized modern society has led to having big factories, sophisticated modern structure and densely populated urban area. Due to complexity of these area and inflammable material commonly found in these areas, 
+Fire outbreaks are a common occurrence in densely populated urban areas with buildings and factories. Fire incident can cause great damage to life and property. Fire fighting is an important but dangerous job with risks to both the rescuer and the victim[9]. Fire fighting is arduous due to the complexity of the building, the sheer number of people in these area among other factors[9].\\
 
-In Fig.~\ref{Fig:universe} we show a picture of the universe!
+Current fire fighting system are based on humans using water guns and chemical fire repression systems[x]. However, humans cannot work effectively in all fire environment, therefore, there is a need for robots to aid in fire fighting scenarios. While research on the use of robots in fire fighting is in order to save lives and property is ongoing, there are still alot of work to be done in order to deploy robots to aid fire fighting.\\
 
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[scale=1.7]{figures/universe.jpg}
-  \caption{The Universe}
-  \label{Fig:universe}
-\end{figure}
+Some of the challenges of deploying robot in fire fighting situation include current commercially available fire fighting robots are tele-operated and non autonomous hence require an extra hand to control them remotely. Another challenge of the current are that they are generally not portable and are majorly suited for quenching fire and not search and rescue of victims.\\
+
+While some research robots are deployed with sensors that are able to aid search and rescue operation, most research robot are only tested in controlled environment and are not able designed to withstand the high temperature associated with real fire outbreaks which can be as high as 1000  \degree C. Most of the death in fire incident are as a result of suffocation and smoke inhalation. Hence, fire fighting robots should have an effective way of smoke removal from the environment. Current fire fighting are not designed to be able to expel the excessive dust and smoke that may be present in real life fire scenarios. \\
+
+In order to resolve these problem, In this paper, we propose to use a modified version of the Spot with Arm robot from Boston dynamics[], a quadrupedal manipulator, for use in firefighting scenarios in buildings.  The Spot robot is suitable for working in building environments as it is quadruped. It is equipped with capabilities such as climbing stairs and opening doors. It comes with robotic arm attached to it. Hence it is able to remove obstacles in it's way. Spot can move autonomously and can be modified such that it is able to work effectively in a fire incident/scenario.\\
+
+The main function of this robot is to support fire fighter in fire suppression, search and rescue mission in fire incident. The robot works in such a way that it searches for victims trapped in a fire scenario using a Life Detection Radar[8] that is able to sense the low frequency pulses of the heart and evaluate whether a victim is alive. while searching, the robot is also simultaneously scanning the environment using a 3D laser scanner integrated into it to show the most engulfed parts of the building and relays this back to the fire fighting team. this is such that the fire fighting team is aware of the risky areas and hence makes the fire scenario planning easier for them. The robot also has a vacuum fan mounted on it. This is to suck out poisonous vapour that can pose life threatening risk to the victims before the rescue team is on ground. These ensures that the victims life protected during the fire incident. By using this robot, fire detection and rescue activities can be done with higher security without placing fire fighters at high risk and dangerous conditions. This also ensures that the victims can be rescued in time[].\\
+
+The robot is going to be evaluated based on it's ability to detect victims and position them accurately in the generated map. Our proposed solution also evaluates the time taken to complete the fire fighting process with and without a robot.\\
+
+The outline of this paper is as follows:
+we first review previous work on robots used in fire fighting applications and identified challenges of the previous works. We then introduce our fire fighting robot design to solve the challenges identified. The hypothesis and evaluation outlines the expected outcomes and planned experiments. Finally, we discuss the findings of our paper and potential future directions.
+
+
+% main shortcoming of these solutions is that they are mostly single purpose devices, unable to render a range of feedback required for a variety of envisioned VR/AR scenarios. primary design principle of our controller is to provide a multi-purpose controller that contains both the expected functionality of a VR controller (i.e., buttons, 6DOF movement control, thumb joysticks, trigger) and enables a variety of haptic renderings for the most commonly expected hand interactions: grasping, touching, and triggering.
+
+
+% Thus, The proposed robot is able to increase effectiveness of task in firefighting.\\
+
+%  several things needseveral continues to go on the use 
+
+% Also the process of searching for victims and rescuing them is not the most optimal.
+
+% SPOT is going to be modified such that it is able to work in a fire environment.
+
+% In Fig.~\ref{Fig:universe} we show a picture of the universe!
+
+% \begin{figure}[ht!]
+%   \centering
+%   \includegraphics[scale=1.7]{figures/universe.jpg}
+%   \caption{The Universe}
+%   \label{Fig:universe}
+% \end{figure}
